@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:900');
+@import "../node_modules/@nouhsa/akramcss/css/akramcss.min.css";  /* import akramcss*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+  display: flex;
+  font-family: sans-serif;
+  margin: 0 15px;
+  background: #6D6027;
+  background: linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container>div { /*.card*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(39, 0, 236, 0.511);
+
+    }   
+img:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+  }
+  
+img {
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+  }
+.card:not(:hover) {
+    filter: blur(1px);
+    transition: 1s ease-in-out;
+  }
+.card:hover {
+    filter: none;
+    transition: 1s ease-in-out;
+  }
+h2, p {
+    color: #fff;
+    text-align: center;
+    padding:15px;
+  }
+img {
+    border-radius: 20px;
+  }
+ 
+
+@media (max-width: 768px) {
+    h2{
+        font-size: smaller;
+    }
+  .container {
+   display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  
+
+  }
+  .container>div {
+    width: 80%;
+
+  }
+  img{
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  .container>div {
+    width: 80%;
+  }
+  img{
+    width: 90%;
+  }
+}
